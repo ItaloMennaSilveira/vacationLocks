@@ -14,13 +14,13 @@ public class Client extends Thread {
 
 	public Client() {}
 
-public Client(int id,//1,2,3,4,5...
-	Manager managerPtr, //manager
-	int numOperation,//numTransactionPerClient -> TRANSACTIONS/numClient(threads) -> 50000/1 
-	int numQueryPerTransaction, // NUMBER -> 10
-	int queryRange,// QUERIES / 100.0 * RELATIONS -> 90/100*10000 -> 9000
-	int percentUser,// USER -> 80
-        Lock lock) {//lock
+public Client(int id,
+	Manager managerPtr, 
+	int numOperation,
+	int numQueryPerTransaction, 
+	int queryRange,
+	int percentUser,
+        Lock lock) {
 	this.randomPtr = new Random();
 	this.randomPtr.random_alloc();
 	this.id=id;
